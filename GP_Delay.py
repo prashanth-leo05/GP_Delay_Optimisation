@@ -34,10 +34,7 @@ class Netlist:
         skip every other node starting from second 
         node as they are not gates '''
         path = nx.dag_longest_path(self.DAG)[1::2]
-        #path = [path[idx] for idx in range(1,len(path),2)]
         path = [f"{self.DAG.nodes[node]['type']}_{node}" for node in path]
-        #print(f"depth = {len(path)}")
-        #print(" ==> ".join(path))
         return "=>".join(path)
 
     def parse(self):
