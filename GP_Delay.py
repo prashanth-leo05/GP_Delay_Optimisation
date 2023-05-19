@@ -73,7 +73,7 @@ class GPproblem(Netlist):
       self.model()
 
   def __repr__(self):
-    return f"GPproblem for {self.netlist}" 
+    return f"GPproblem for {self.DAG}" 
 
   def model(self):
     constraints=[]
